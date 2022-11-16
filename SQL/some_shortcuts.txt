@@ -1,0 +1,5 @@
+To read the strings inside a binary File - 
+strings <binary_file> 
+
+we can use this to grep some useful things we need 
+strings <binary_file> | grep "" 
