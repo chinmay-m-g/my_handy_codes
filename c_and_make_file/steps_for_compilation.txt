@@ -1,0 +1,22 @@
+Step1 :  Preprocessor (.i)
+ -Replaces all the macros with the values
+ -Replaces the header files with the contents. Contents of header files are function declarations.
+ -Removes any comments in the code
+Command : gcc -E helloworld.c -o helloworld_p_1.i
+
+
+Step2 : Compilation(.s)
+ -Converts C to assembly Language.
+ -The assembly language is compiler and processor architecture specific.
+ -Output of this step will be specific to processor. 
+ Command : gcc -S helloworld.c -o helloworld_c_2.s
+
+ Step3 : Assembler(.o)
+  -Converts Assembly language to Binary (Object File)
+  -In a Project there can be many C source files. Each C source file will have its corresponding object file (or .o file).
+Command : gcc helloworld.c -o helloworld_o_3.o
+
+Step4 :  Linking(.out)
+ -Links all the executable object file into a single executable .out file.
+ -Uses the libc (Standard Library)
+Command : gcc helloworld.c hello2.c -o helloworld_execute
